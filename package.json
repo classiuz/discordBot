@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./dist/index.js",
-    "cmp": "tsc --target ES6"
+    "dev": "tsc --target ES6 && nodemon ./dist/index.js",
+    "push": "git branch -M main && git push -u origin main"
   },
   "author": "",
   "license": "ISC",
