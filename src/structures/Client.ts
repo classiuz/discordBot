@@ -1,27 +1,27 @@
-import { Client as discordClient, Collection, IntentsBitField } from "discord.js";
-import Command from "./Command";
-import fs from "fs";
+import { Client as discordClient, Collection, IntentsBitField } from "discord.js"
+import Command from "./Command"
+import fs from "fs"
 
-const intents = new IntentsBitField(37379);
+const intents = new IntentsBitField(37379)
 
 class Client extends discordClient {
     commands: Collection<string, Command>
 
     constructor() {
-        super({ intents });
+        super({ intents })
 
-        this.commands = new Collection()
+        this.commands = new Collection();
     }
 
     start(token: string) {
         fs.readdirSync('./dist/commands').filter(file => file.endsWith(".js")).forEach(file => {
-            const command: Command = require(`../commands/${file}`);
-            console.log(`The Command "${command.name}" has been loaded`);
-            this.commands.set(command.name, command);
+            const command: Command = require(`../commands/${file}`)
+            console.log(`The Command "${command.name}" has been loaded`)
+            this.commands.set(command.name, command)
         });
 
         this.login(token);
     }
 }
 
-export default Client;
+export default Client

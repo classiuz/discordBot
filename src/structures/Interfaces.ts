@@ -1,4 +1,6 @@
-import { Client, Message } from "discord.js";
+import { Client, Message } from "discord.js"
+
+type permissions = 'Admin' | 'User' | 'Everyone'
 
 export interface RunFunction {
     (
@@ -11,6 +13,6 @@ export interface RunFunction {
 export interface Options {
     name: string,
     description: string,
-    permissions: string,
+    permissions: permissions,
     run: RunFunction
 }
