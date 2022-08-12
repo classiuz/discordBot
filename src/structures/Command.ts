@@ -1,16 +1,15 @@
-import { Client, Message } from "discord.js";
-
-type runFunction = (message: Message, args: string[], client: Client) => any;
-type options = { name: string, description: string, run: runFunction }
+import { RunFunction, Options } from "./Interfaces";
 
 class Command {
     name: string;
     description: string;
-    run: runFunction;
+    permissions: string;
+    run: RunFunction;
 
-    constructor(options: options) {
+    constructor(options: Options) {
         this.name = options.name;
         this.description = options.description;
+        this.permissions = options.permissions;
         this.run = options.run;
     };
 };

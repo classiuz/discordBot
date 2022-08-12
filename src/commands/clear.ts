@@ -3,6 +3,7 @@ import Command from "../structures/Command";
 export = new Command({
     name: 'clear',
     description: 'Elimina una cantidad especificada de mensajes.',
+    permissions: 'Admin',
 
     async run(message, args, client) {
         const amount = args[1];

@@ -1,8 +1,8 @@
 import { Client as discordClient, Collection, IntentsBitField } from "discord.js";
 import Command from "./Command";
-import fs from 'fs';
+import fs from "fs";
 
-const intents = new IntentsBitField(37377);
+const intents = new IntentsBitField(37379);
 
 class Client extends discordClient {
     commands: Collection<string, Command>
