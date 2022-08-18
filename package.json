@@ -1,12 +1,12 @@
 {
   "name": "indicom-discord-bot",
   "version": "1.0.0",
-  "description": "",
+  "description": "Discord Bot for Indicom",
   "main": "index.js",
   "scripts": {
     "dev": "tsc --target ES6 && nodemon ./dist/index.js"
   },
-  "author": "",
+  "author": "ClaSSius",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^14.1.2"

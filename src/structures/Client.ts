@@ -10,7 +10,7 @@ class Client extends discordClient {
     constructor() {
         super({ intents })
 
-        this.commands = new Collection();
+        this.commands = new Collection()
     }
 
     start(token: string) {
@@ -20,7 +20,7 @@ class Client extends discordClient {
             this.commands.set(command.name, command)
         });
 
-        this.login(token);
+        this.login(token)
     }
 }
 

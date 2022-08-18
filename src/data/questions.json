@@ -1,0 +1,49 @@
+[
+    {
+        "id": 0,
+        "name": "DNI no autorizado",
+        "keys": [
+            "DNI no autorizado",
+            "DNI",
+            "documento",
+            "D.N.I",
+            "autorizado"
+        ],
+        "response": {
+            "title": "DNI no autorizado",
+            "body": "Si el cliente posee el DNI no autorizado, verificar en STOCK e INSUMO si tiene un equipo pendiente de entrega.",
+            "link": ""
+        }
+
+    },
+    {
+        "id": 0,
+        "name": "Sucursales habilitadas Rapipago",
+        "keys": [
+            "Sucursales habilitadas Rapipago",
+            "Sucursales",
+            "habilitadas",
+            "Rapipago"
+        ],
+        "response": {
+            "title": "Sucursales habilitadas Rapipago",
+            "body": "Lista de las sucursales de Rapipago habilitadas para devolución de equipos - LINK",
+            "link": ""
+        }
+    },
+    {
+        "id": 0,
+        "name": "Deco ID121 sin suscripción",
+        "keys": [
+            "Deco",
+            "ID121",
+            "121",
+            "suscripción"
+        ],
+        "response": {
+            "title": "Deco ID121 - Canal sin suscripción",
+            "body": "Verificar si tiene contratado el pack que esta intentando visualizar, si lo tiene entonces refrescar señal CRM y realiza Batch I3, si persiste genera RA",
+            "link": ""
+        }
+    }
+]

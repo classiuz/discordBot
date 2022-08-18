@@ -3,7 +3,7 @@ import { RunFunction, Options } from "./Interfaces"
 class Command {
     name: string
     description: string
-    permissions: string
+    permissions: string[]
     run: RunFunction
 
     constructor(options: Options) {

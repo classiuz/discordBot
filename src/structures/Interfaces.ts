@@ -1,18 +1,18 @@
 import { Client, Message } from "discord.js"
 
-type permissions = 'Admin' | 'User' | 'Everyone'
+type permissions = 'Admin' | 'Mod' | 'User' | 'Everyone'
 
 export interface RunFunction {
     (
         message: Message,
         args: string[],
         client: Client
-    ): any
+    ): void
 }
 
 export interface Options {
     name: string,
     description: string,
-    permissions: permissions,
+    permissions: permissions[],
     run: RunFunction
 }
