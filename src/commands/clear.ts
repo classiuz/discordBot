@@ -1,8 +1,10 @@
 import Command from "../structures/Command"
 
 export = new Command({
-    name: 'clear',
+    name: 'Clear',
+    alias: 'c',
     description: 'Elimina una cantidad especificada de mensajes.',
+    channels: ['Public'],
     permissions: ['Admin', 'Mod'],
 
     async run(message, args, client) {

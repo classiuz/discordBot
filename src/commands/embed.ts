@@ -2,8 +2,10 @@ import Command from "../structures/Command"
 import { EmbedBuilder } from "discord.js"
 
 export = new Command({
-    name: 'embed',
+    name: 'Embed',
+    alias: 'e',
     description: 'Envía un anuncio con el bot.',
+    channels: ['Public'],
     permissions: ['Admin'],
 
     run(message, args, client) {

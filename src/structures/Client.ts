@@ -4,7 +4,7 @@ import fs from "fs"
 
 const intents = new IntentsBitField(37379)
 
-class Client extends discordClient {
+export default class Client extends discordClient {
     commands: Collection<string, Command>
 
     constructor() {
@@ -16,12 +16,10 @@ class Client extends discordClient {
     start(token: string) {
         fs.readdirSync('./dist/commands').filter(file => file.endsWith(".js")).forEach(file => {
             const command: Command = require(`../commands/${file}`)
-            console.log(`The Command "${command.name}" has been loaded`)
+            console.log(`The Command "${command.name}" has been loaded.`)
             this.commands.set(command.name, command)
         });
 
         this.login(token)
     }
 }
-
-export default Client

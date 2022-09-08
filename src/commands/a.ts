@@ -2,11 +2,18 @@ import Command from "../structures/Command"
 import questions from "../data/questions.json"
 
 export = new Command({
-    name: 'a',
+    name: 'Ask',
+    alias: 'a',
     description: 'Realiza una pregunta',
+    channels: ['DM'],
     permissions: ['Everyone'],
 
     async run(message, args, client) {
+        if (message.channel.type == 0) {
+            message.delete()
+            message.author.send('¿En qué puedo ayudarte?')
+            return false
+        }
         questions.forEach((arr, idx) => arr.id = idx);
         const questionsId: number[] = []
         args.forEach(arg => {

@@ -1,5 +1,6 @@
 import { Client, Message } from "discord.js"
 
+type channels = 'Public' | 'DM' | 'Custom'
 type permissions = 'Admin' | 'Mod' | 'User' | 'Everyone'
 
 export interface RunFunction {
@@ -11,8 +12,10 @@ export interface RunFunction {
 }
 
 export interface Options {
-    name: string,
-    description: string,
-    permissions: permissions[],
+    name: string
+    alias: string
+    description: string
+    channels: channels[]
+    permissions: permissions[]
     run: RunFunction
 }

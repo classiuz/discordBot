@@ -1,8 +1,10 @@
 import Command from "../structures/Command"
 
 export = new Command({
-    name: 'hello',
+    name: 'Hello',
+    alias: 'hi',
     description: 'Say Hello',
+    channels: ['Public', 'DM'],
     permissions: ['Everyone'],
 
     run(message, args, client) {
